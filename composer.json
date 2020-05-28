@@ -1,0 +1,54 @@
+{
+    "name": "codeat3/laravel-linemaro-gatherer",
+    "description": "",
+    "keywords": [
+        "codeat3",
+        "laravel-linemaro-gatherer"
+    ],
+    "homepage": "https://github.com/codeat3/laravel-linemaro-gatherer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Swapnil Sarwe",
+            "email": "swapnilsarwe@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codeat3\\LaravelLinemaroGatherer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codeat3\\LaravelLinemaroGatherer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codeat3\\LaravelLinemaroGatherer\\LaravelLinemaroGathererServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLinemaroGatherer": "Codeat3\\LaravelLinemaroGatherer\\LaravelLinemaroGathererFacade"
+            }
+        }
+    }
+}
